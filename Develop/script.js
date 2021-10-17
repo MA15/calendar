@@ -7,7 +7,7 @@ console.log(textarea)
 
 var now = moment();
 
-//
+
 $(window).on("load", function () {
     $("#currentDay").text(moment().format("MM/DD/YYYY"));
 
@@ -15,7 +15,7 @@ $(window).on("load", function () {
     $(".saveBtn").click(function () {
         var taskText = $(this).siblings(".description").val();
 
-        var blockHour = parseInt($(this).siblings(".hour").textarea().substring());
+        var blockHour = parseInt($(this).siblings(".hour").text().substring());
 
         localStorage.setItem(blockHour, taskText);
     });
@@ -30,30 +30,7 @@ $(window).on("load", function () {
     });
 });
 
-//checks time and time block id
-// function checkTime() {
-//     var currentHourcurrentTime.hours();
-//     var timeBlock=$(".time-block");
 
-//     for(var i=0;i<timeBlock.length;i++) {
-//         var block=timeBlock[i];
-//         if(parseInt(block.id.split("-")[0])---currentHour) {
-//             $(block).addClass("past");
-//           } else if (parseInt(block.id.split("-")[0])---currentHour) {
-//             $(block).removeClass("past");
-//             $(block).addClass("present");
-//           } else {
-//             $(block).removeClass("past");
-//             $(block).removeClass("present");
-//             $(block).addClass("future");
-//         }
-//     }
-// }
 
-// $('time').each(function(i, e) {
-//     var time = moment($(e).attr('datetime'));
-  
-//     $(e).html('<span>' + time.calendar() + '</span>');
 
-//     console.log(time);
-//   })
+
